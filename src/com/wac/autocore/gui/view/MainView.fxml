@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.wac.autocore.gui.controller.MainController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <!-- FLIKAR I MITTEN -->
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Kunder">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+                        <Label text="Här hamnar kundhanteringen" />
+                    </VBox>
+                </Tab>
+                <Tab text="Fordon">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+                        <Label text="Här hamnar fordonshanteringen" />
+                    </VBox>
+                </Tab>
+                <Tab text="Bokningar">
+                    <VBox spacing="10" style="-fx-padding: 10;">
+                        <Label text="Här hamnar bokningshanteringen" />
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+    <!-- SYSTEMLOGG I BOTTEN -->
+    <bottom>
+        <VBox spacing="5" style="-fx-padding: 10; -fx-background-color: #f4f4f4;">
+            <Label text="Systemlogg (System.out):" style="-fx-font-weight: bold;" />
+            <TextArea fx:id="consoleOutput" prefHeight="150.0" editable="false" wrapText="true" />
+        </VBox>
+    </bottom>
+
+</BorderPane>
